@@ -39,14 +39,13 @@ return { allowed, new_tokens }
 
 export const check = async (key) => {
   const keys = [`${key}.tokens`, `${key}.timestamp`];
-  const rate = 2;
+  const rate = 1;
   const capacity = rate * 3;
   const now = Math.floor(new Date().getTime() / 1000);
   const requested = 1;
   const args = [rate, capacity, now, requested];
 
   const res = await redis.eval(script, keys.length, ...keys, ...args);
-  console.log(res);
   return {
     allowed: res[0] === 1,
     remaining: res[1],
