@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { API_URL } from "../config/index";
 
 export default function Home({ data }) {
   return (
@@ -24,7 +25,7 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`http://localhost:3000/api/limit`);
+  const res = await fetch(`${API_URL}/api/limit`);
   const data = await res.json();
   if (!data) {
     return {
