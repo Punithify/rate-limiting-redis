@@ -1,5 +1,5 @@
 
-# Rate-Limiting_Redis
+# Rate-Limiting-Redis
 Rate limiting implementation using the Leaky bucket algo.
 
 
