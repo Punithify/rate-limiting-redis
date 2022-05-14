@@ -1,7 +1,7 @@
 
 # Rate-Limiting-Redis
 Rate limiting implementation using the Leaky bucket algo.
-
+# Refesh the page to perform network request
 
 ## Environment Variables
 
